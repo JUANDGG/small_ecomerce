@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component,  input } from '@angular/core';
+
+import {StrutureProduct } from '../../services/ApiContract';
+
 
 @Component({
-  selector: 'app-product',
+  selector: 'home-product',
   imports: [],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
-export class ProductComponent {
 
+export class ProductComponent {
+  products  = input<StrutureProduct []>();
 }

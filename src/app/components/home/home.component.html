@@ -1,5 +1,14 @@
-<main>
-    <home-header title={{title}}/>
-</main>
-<router-outlet></router-outlet>
+    <main>
+        <home-header title={{_title}} [categories] = "_categories()"/>
+
+        <section class="p-5 flex justify-center flex-wrap">
+            @if (_router.url =="/home") {
+                <home-product [products]="_products()"/>
+            }@else {
+                <router-outlet></router-outlet>
+            }
+        </section>
+                
+    </main>
+
 

@@ -9,4 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   title = input<string>("");
+  
+  categories = input<string[]>([])
+
 }
