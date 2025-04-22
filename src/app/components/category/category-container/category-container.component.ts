@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { FetchinService } from '../../../services/FetchinService';
 import { CategoryItemComponent } from '../category-item/category-item.component';
-import { StrutureCategory } from '../../../services/ApiContract';
+import { StrutureCategory } from '../../../util/struturesApi';
 
 @Component({
   selector: 'home-category-container',

@@ -1,6 +1,6 @@
 import { Component,  input } from '@angular/core';
 
-import {StrutureProduct } from '../../../services/ApiContract';
+import {StrutureProduct } from '../../../util/struturesApi';
 
 
 @Component({

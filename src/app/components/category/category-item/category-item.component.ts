@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { StrutureCategory } from '../../../services/ApiContract';
+import { StrutureCategory } from '../../../util/struturesApi';
 
 @Component({
   selector: 'home-category-target',

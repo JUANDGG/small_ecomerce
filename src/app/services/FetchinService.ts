@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';  
-import {API_ROUTES } from './ApiContract';
+import {API_ROUTES } from '../util/struturesApi';
 import { Observable } from 'rxjs';
 
 @Injectable({

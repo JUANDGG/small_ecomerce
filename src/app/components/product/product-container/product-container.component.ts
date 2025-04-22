@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { FetchinService } from '../../../services/FetchinService';
-import { StrutureProduct } from '../../../services/ApiContract';
+import { StrutureProduct } from '../../../util/struturesApi';
 import { ProductComponent } from "../product_target/product.component";
 
 @Component({
