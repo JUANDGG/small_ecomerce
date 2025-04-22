@@ -1,8 +1,10 @@
     <main>
-        <home-header title={{_title}} [categories] = "_categories()"/>
-
+        <home-header 
+        (categoryClicked)="handlerCategorySelected($event)" 
+        (titleClicked)="handlerTitleSelected($event)"
+        title={{_title}} [categories] = "_categories()"/>
         <section class="p-5 flex justify-center flex-wrap">
-            @if (_router.url =="/home") {
+            @if (_router.url =="/home/products") {
                 <home-product [products]="_products()"/>
             }@else {
                 <router-outlet></router-outlet>
