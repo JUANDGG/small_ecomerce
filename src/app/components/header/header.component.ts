@@ -1,11 +1,12 @@
 import { Component, input, Input, output, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CategoryContainerComponent } from '../category/category-container/category-container.component';
 
 @Component({
   selector: 'home-header',
-  imports: [RouterLink ],
+  imports: [RouterLink ,CategoryContainerComponent ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  
 })
 export class HeaderComponent {
   title = input<string>("");

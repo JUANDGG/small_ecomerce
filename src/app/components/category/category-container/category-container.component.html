@@ -1,0 +1,11 @@
+<div>
+    <ul class="flex gap-2 text-2xl ">
+        @for (item of _categories(); track $index) {
+            <li class="hover:text-orange-400 transition duration-300 cursor-pointer capitalize">
+                <home-category-target [struture]="item" />
+            </li>
+            <span>|</span>
+
+        }
+    </ul>
+</div>

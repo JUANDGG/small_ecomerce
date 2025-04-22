@@ -1,5 +1,5 @@
 
-export interface StrutureProduct {
+export  interface StrutureProduct {
     id: number;
     title: string;
     price: number;
@@ -8,8 +8,11 @@ export interface StrutureProduct {
   }
   
 
+export  interface StrutureCategory {
+   name :string
+}
+  
 
 export const API_ROUTES = {
-    COMPLETE : "https://fakestoreapi.com" ,             
-        
+    COMPLETE : "https://fakestoreapi.com" ,                    
 }

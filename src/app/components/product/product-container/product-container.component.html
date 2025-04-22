@@ -1,0 +1,17 @@
+<section class="flex justify-center items-center">
+    @defer (on viewport) {
+      <div class="w-500 flex flex-wrap justify-center items-stretch gap-5 pt-15">
+        @for (item of _products(); track $index) {
+          <home-product-target [struture]="item" />
+        }
+      </div>
+    } @loading (minimum 1s) {
+        <div class="flex items-center justify-center mt-10 space-x-2 ">
+            <div class="h-10 w-10 animate-spin rounded-full border-5 border-blue-500 border-t-transparent"></div>
+        </div>
+        
+    } @placeholder {
+      <div></div>
+    }
+  </section>
+  
