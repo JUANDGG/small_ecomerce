@@ -1,5 +1,7 @@
 import { Component, input, output } from '@angular/core';
 import { StrutureCategory } from '../../../util/struturesApi';
+import { CaptureCategoryService } from '../../../services/CaptureCategoryService';
+import { GetCategoriesService } from '../../../services/GetCategoriesService';
 
 @Component({
   selector: 'home-category-target',
@@ -8,11 +10,18 @@ import { StrutureCategory } from '../../../util/struturesApi';
 })
 export class CategoryItemComponent {
   struture  = input<StrutureCategory>({} as StrutureCategory)   
-  nameCategory = output<string>();
+
+  constructor(private captureCategoryService : CaptureCategoryService , private getCategoriesService :GetCategoriesService){}
 
   handleClick(event :Event){
-    const name = event.target as HTMLElement
-    this.nameCategory.emit(name.innerText)
+    const name = (event.target as HTMLElement ).innerHTML
+
+    const categories =this.getCategoriesService.getCategories()
+
+    //I validate that the name that is clicked is actually in the API and not that the user has entered it with the intention of breaking the page on purpose as such,
+    const filterCategory = categories().filter(category => category ==name)
+  
+    this.captureCategoryService.setNowCategory(name)
   }
 
 }
